@@ -1,0 +1,1143 @@
+��ͣԭ����ȡ��д������Զ�д��ͨ�����Զ������ݱ��.pyc (Python 3.11)
+[Code]
+    File Name: 涨停原因提取并写入表格并自动写入通达信自定义数据标记.py
+    Object Name: <module>
+    Qualified Name: <module>
+    Arg Count: 0
+    Pos Only Arg Count: 0
+    KW Only Arg Count: 0
+    Stack Size: 7
+    Flags: 0x00000000
+    [Names]
+        'print'
+        'requests'
+        'csv'
+        'os'
+        'time'
+        'path'
+        'exists'
+        'remove'
+        'open'
+        'file'
+        'DictWriter'
+        'csv_write'
+        'writeheader'
+        'headers'
+        'url'
+        'get'
+        'response'
+        'json'
+        'json_data'
+        'data_list'
+        'data'
+        'data1'
+        'data2'
+        'data3'
+        'data4'
+        'data_dict'
+        'writerow'
+        'zdysj'
+        'f'
+        'write'
+        'MARK'
+        'TIP'
+        'TIPWORD'
+        'TIPCOLOR'
+        'TIME'
+        'sleep'
+    [Locals+Names]
+    [Constants]
+        '软件制作：黄德恩  企鹅号：403909123'
+        '请稍候，数据正在提取和制作中！'
+        0
+        None
+        'C:\\Users\\Administrator\\Desktop\\涨停原因.csv'
+        'C:\\new_haitong\\T0002\\signals\\extern_user.txt'
+        'C:\\new_haitong\\T0002\\mark.dat'
+        'w'
+        'utf-8'
+        ''
+        (
+            'mode'
+            'encoding'
+            'newline'
+        )
+        (
+            '股票代码'
+            '股票名称'
+            '涨停原因'
+        )
+        (
+            'fieldnames'
+        )
+        'User-Agent'
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+        'https://flash-api.xuangubao.cn/api/pool/detail?pool_name=limit_up'
+        (
+            'headers'
+        )
+        'data'
+        'symbol'
+        6
+        'stock_chi_name'
+        'surge_reason'
+        'related_plates'
+        'plate_name'
+        '6'
+        '1|'
+        '|'
+        '7008'
+        '0.000'
+        '0|'
+        'a'
+        'ANSI'
+        '\r\n'
+        'C:\\Users\\Administrator\\Desktop\\涨停原因.txt'
+        '开始制作标记......'
+        '[MARK]'
+        '01'
+        '='
+        '7'
+        '00'
+        '[TIP]'
+        '[TIPWORD]'
+        '[TIPCOLOR]'
+        '65535'
+        '[TIME]'
+        3
+        '数据提取制作完成！'
+        5
+    [Disassembly]
+        0       RESUME                        0
+        2       PUSH_NULL                     
+        4       LOAD_NAME                     0: print
+        6       LOAD_CONST                    0: '软件制作：黄德恩  企鹅号：403909123'
+        8       PRECALL                       1
+        12      CALL                          1
+        22      POP_TOP                       
+        24      PUSH_NULL                     
+        26      LOAD_NAME                     0: print
+        28      LOAD_CONST                    1: '请稍候，数据正在提取和制作中！'
+        30      PRECALL                       1
+        34      CALL                          1
+        44      POP_TOP                       
+        46      LOAD_CONST                    2: 0
+        48      LOAD_CONST                    3: None
+        50      IMPORT_NAME                   1: requests
+        52      STORE_NAME                    1: requests
+        54      LOAD_CONST                    2: 0
+        56      LOAD_CONST                    3: None
+        58      IMPORT_NAME                   2: csv
+        60      STORE_NAME                    2: csv
+        62      LOAD_CONST                    2: 0
+        64      LOAD_CONST                    3: None
+        66      IMPORT_NAME                   3: os
+        68      STORE_NAME                    3: os
+        70      LOAD_CONST                    2: 0
+        72      LOAD_CONST                    3: None
+        74      IMPORT_NAME                   4: time
+        76      STORE_NAME                    4: time
+        78      LOAD_NAME                     3: os
+        80      LOAD_ATTR                     5: path
+        90      LOAD_METHOD                   6: exists
+        112     LOAD_CONST                    4: 'C:\\Users\\Administrator\\Desktop\\涨停原因.csv'
+        114     PRECALL                       1
+        118     CALL                          1
+        128     POP_JUMP_FORWARD_IF_FALSE     16 (to 162)
+        130     PUSH_NULL                     
+        132     LOAD_NAME                     3: os
+        134     LOAD_ATTR                     7: remove
+        144     LOAD_CONST                    4: 'C:\\Users\\Administrator\\Desktop\\涨停原因.csv'
+        146     PRECALL                       1
+        150     CALL                          1
+        160     POP_TOP                       
+        162     LOAD_NAME                     3: os
+        164     LOAD_ATTR                     5: path
+        174     LOAD_METHOD                   6: exists
+        196     LOAD_CONST                    5: 'C:\\new_haitong\\T0002\\signals\\extern_user.txt'
+        198     PRECALL                       1
+        202     CALL                          1
+        212     POP_JUMP_FORWARD_IF_FALSE     16 (to 246)
+        214     PUSH_NULL                     
+        216     LOAD_NAME                     3: os
+        218     LOAD_ATTR                     7: remove
+        228     LOAD_CONST                    5: 'C:\\new_haitong\\T0002\\signals\\extern_user.txt'
+        230     PRECALL                       1
+        234     CALL                          1
+        244     POP_TOP                       
+        246     LOAD_NAME                     3: os
+        248     LOAD_ATTR                     5: path
+        258     LOAD_METHOD                   6: exists
+        280     LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        282     PRECALL                       1
+        286     CALL                          1
+        296     POP_JUMP_FORWARD_IF_FALSE     16 (to 330)
+        298     PUSH_NULL                     
+        300     LOAD_NAME                     3: os
+        302     LOAD_ATTR                     7: remove
+        312     LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        314     PRECALL                       1
+        318     CALL                          1
+        328     POP_TOP                       
+        330     PUSH_NULL                     
+        332     LOAD_NAME                     8: open
+        334     LOAD_CONST                    4: 'C:\\Users\\Administrator\\Desktop\\涨停原因.csv'
+        336     LOAD_CONST                    7: 'w'
+        338     LOAD_CONST                    8: 'utf-8'
+        340     LOAD_CONST                    9: ''
+        342     KW_NAMES                      10
+        344     PRECALL                       4
+        348     CALL                          4
+        358     STORE_NAME                    9: file
+        360     PUSH_NULL                     
+        362     LOAD_NAME                     2: csv
+        364     LOAD_ATTR                     10: DictWriter
+        374     LOAD_NAME                     9: file
+        376     BUILD_LIST                    0
+        378     LOAD_CONST                    11: ('股票代码', '股票名称', '涨停原因')
+        380     LIST_EXTEND                   1
+        382     KW_NAMES                      12
+        384     PRECALL                       2
+        388     CALL                          2
+        398     STORE_NAME                    11: csv_write
+        400     LOAD_NAME                     11: csv_write
+        402     LOAD_METHOD                   12: writeheader
+        424     PRECALL                       0
+        428     CALL                          0
+        438     POP_TOP                       
+        440     LOAD_CONST                    13: 'User-Agent'
+        442     LOAD_CONST                    14: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+        444     BUILD_MAP                     1
+        446     STORE_NAME                    13: headers
+        448     LOAD_CONST                    15: 'https://flash-api.xuangubao.cn/api/pool/detail?pool_name=limit_up'
+        450     STORE_NAME                    14: url
+        452     PUSH_NULL                     
+        454     LOAD_NAME                     1: requests
+        456     LOAD_ATTR                     15: get
+        466     LOAD_NAME                     14: url
+        468     LOAD_NAME                     13: headers
+        470     KW_NAMES                      16
+        472     PRECALL                       2
+        476     CALL                          2
+        486     STORE_NAME                    16: response
+        488     LOAD_NAME                     16: response
+        490     LOAD_METHOD                   17: json
+        512     PRECALL                       0
+        516     CALL                          0
+        526     STORE_NAME                    18: json_data
+        528     LOAD_NAME                     18: json_data
+        530     LOAD_CONST                    17: 'data'
+        532     BINARY_SUBSCR                 
+        542     STORE_NAME                    19: data_list
+        544     LOAD_NAME                     19: data_list
+        546     GET_ITER                      
+        548     FOR_ITER                      318 (to 1188)
+        552     STORE_NAME                    20: data
+        554     LOAD_NAME                     20: data
+        556     LOAD_CONST                    18: 'symbol'
+        558     BINARY_SUBSCR                 
+        568     STORE_NAME                    21: data1
+        570     LOAD_NAME                     21: data1
+        572     LOAD_CONST                    2: 0
+        574     LOAD_CONST                    19: 6
+        576     BUILD_SLICE                   2
+        578     BINARY_SUBSCR                 
+        588     STORE_NAME                    22: data2
+        590     LOAD_NAME                     20: data
+        592     LOAD_CONST                    20: 'stock_chi_name'
+        594     BINARY_SUBSCR                 
+        604     STORE_NAME                    23: data3
+        606     LOAD_NAME                     20: data
+        608     LOAD_CONST                    21: 'surge_reason'
+        610     BINARY_SUBSCR                 
+        620     LOAD_CONST                    22: 'related_plates'
+        622     BINARY_SUBSCR                 
+        632     LOAD_CONST                    2: 0
+        634     BINARY_SUBSCR                 
+        644     LOAD_CONST                    23: 'plate_name'
+        646     BINARY_SUBSCR                 
+        656     STORE_NAME                    24: data4
+        658     LOAD_NAME                     21: data1
+        660     LOAD_NAME                     23: data3
+        662     LOAD_NAME                     24: data4
+        664     LOAD_CONST                    11: ('股票代码', '股票名称', '涨停原因')
+        666     BUILD_CONST_KEY_MAP           3
+        668     STORE_NAME                    25: data_dict
+        670     LOAD_NAME                     11: csv_write
+        672     LOAD_METHOD                   26: writerow
+        694     LOAD_NAME                     25: data_dict
+        696     PRECALL                       1
+        700     CALL                          1
+        710     POP_TOP                       
+        712     LOAD_NAME                     21: data1
+        714     LOAD_CONST                    2: 0
+        716     BINARY_SUBSCR                 
+        726     LOAD_CONST                    24: '6'
+        728     COMPARE_OP                    2 (==)
+        734     POP_JUMP_FORWARD_IF_FALSE     26 (to 788)
+        736     LOAD_CONST                    25: '1|'
+        738     LOAD_NAME                     22: data2
+        740     BINARY_OP                     0 (+)
+        744     STORE_NAME                    22: data2
+        746     LOAD_NAME                     22: data2
+        748     LOAD_CONST                    26: '|'
+        750     BINARY_OP                     0 (+)
+        754     LOAD_CONST                    27: '7008'
+        756     BINARY_OP                     0 (+)
+        760     LOAD_CONST                    26: '|'
+        762     BINARY_OP                     0 (+)
+        766     LOAD_NAME                     24: data4
+        768     BINARY_OP                     0 (+)
+        772     LOAD_CONST                    26: '|'
+        774     BINARY_OP                     0 (+)
+        778     LOAD_CONST                    28: '0.000'
+        780     BINARY_OP                     0 (+)
+        784     STORE_NAME                    27: zdysj
+        786     JUMP_FORWARD                  25 (to 838)
+        788     LOAD_CONST                    29: '0|'
+        790     LOAD_NAME                     22: data2
+        792     BINARY_OP                     0 (+)
+        796     STORE_NAME                    22: data2
+        798     LOAD_NAME                     22: data2
+        800     LOAD_CONST                    26: '|'
+        802     BINARY_OP                     0 (+)
+        806     LOAD_CONST                    27: '7008'
+        808     BINARY_OP                     0 (+)
+        812     LOAD_CONST                    26: '|'
+        814     BINARY_OP                     0 (+)
+        818     LOAD_NAME                     24: data4
+        820     BINARY_OP                     0 (+)
+        824     LOAD_CONST                    26: '|'
+        826     BINARY_OP                     0 (+)
+        830     LOAD_CONST                    28: '0.000'
+        832     BINARY_OP                     0 (+)
+        836     STORE_NAME                    27: zdysj
+        838     PUSH_NULL                     
+        840     LOAD_NAME                     8: open
+        842     LOAD_CONST                    5: 'C:\\new_haitong\\T0002\\signals\\extern_user.txt'
+        844     LOAD_CONST                    30: 'a'
+        846     LOAD_CONST                    31: 'ANSI'
+        848     LOAD_CONST                    9: ''
+        850     KW_NAMES                      10
+        852     PRECALL                       4
+        856     CALL                          4
+        866     BEFORE_WITH                   
+        868     STORE_NAME                    28: f
+        870     LOAD_NAME                     28: f
+        872     LOAD_METHOD                   29: write
+        894     LOAD_NAME                     27: zdysj
+        896     PRECALL                       1
+        900     CALL                          1
+        910     POP_TOP                       
+        912     LOAD_NAME                     28: f
+        914     LOAD_METHOD                   29: write
+        936     LOAD_CONST                    32: '\r\n'
+        938     PRECALL                       1
+        942     CALL                          1
+        952     POP_TOP                       
+        954     LOAD_CONST                    3: None
+        956     LOAD_CONST                    3: None
+        958     LOAD_CONST                    3: None
+        960     PRECALL                       2
+        964     CALL                          2
+        974     POP_TOP                       
+        976     JUMP_FORWARD                  11 (to 1000)
+        978     PUSH_EXC_INFO                 
+        980     WITH_EXCEPT_START             
+        982     POP_JUMP_FORWARD_IF_TRUE      4 (to 992)
+        984     RERAISE                       2
+        986     COPY                          3
+        988     POP_EXCEPT                    
+        990     RERAISE                       1
+        992     POP_TOP                       
+        994     POP_EXCEPT                    
+        996     POP_TOP                       
+        998     POP_TOP                       
+        1000    PUSH_NULL                     
+        1002    LOAD_NAME                     8: open
+        1004    LOAD_CONST                    33: 'C:\\Users\\Administrator\\Desktop\\涨停原因.txt'
+        1006    LOAD_CONST                    30: 'a'
+        1008    LOAD_CONST                    31: 'ANSI'
+        1010    LOAD_CONST                    9: ''
+        1012    KW_NAMES                      10
+        1014    PRECALL                       4
+        1018    CALL                          4
+        1028    BEFORE_WITH                   
+        1030    STORE_NAME                    28: f
+        1032    LOAD_NAME                     28: f
+        1034    LOAD_METHOD                   29: write
+        1056    LOAD_NAME                     27: zdysj
+        1058    PRECALL                       1
+        1062    CALL                          1
+        1072    POP_TOP                       
+        1074    LOAD_NAME                     28: f
+        1076    LOAD_METHOD                   29: write
+        1098    LOAD_CONST                    32: '\r\n'
+        1100    PRECALL                       1
+        1104    CALL                          1
+        1114    POP_TOP                       
+        1116    LOAD_CONST                    3: None
+        1118    LOAD_CONST                    3: None
+        1120    LOAD_CONST                    3: None
+        1122    PRECALL                       2
+        1126    CALL                          2
+        1136    POP_TOP                       
+        1138    JUMP_FORWARD                  11 (to 1162)
+        1140    PUSH_EXC_INFO                 
+        1142    WITH_EXCEPT_START             
+        1144    POP_JUMP_FORWARD_IF_TRUE      4 (to 1154)
+        1146    RERAISE                       2
+        1148    COPY                          3
+        1150    POP_EXCEPT                    
+        1152    RERAISE                       1
+        1154    POP_TOP                       
+        1156    POP_EXCEPT                    
+        1158    POP_TOP                       
+        1160    POP_TOP                       
+        1162    PUSH_NULL                     
+        1164    LOAD_NAME                     0: print
+        1166    LOAD_NAME                     27: zdysj
+        1168    PRECALL                       1
+        1172    CALL                          1
+        1182    POP_TOP                       
+        1184    JUMP_BACKWARD                 320
+        1188    PUSH_NULL                     
+        1190    LOAD_NAME                     0: print
+        1192    LOAD_CONST                    34: '开始制作标记......'
+        1194    PRECALL                       1
+        1198    CALL                          1
+        1208    POP_TOP                       
+        1210    PUSH_NULL                     
+        1212    LOAD_NAME                     8: open
+        1214    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        1216    LOAD_CONST                    30: 'a'
+        1218    LOAD_CONST                    31: 'ANSI'
+        1220    LOAD_CONST                    9: ''
+        1222    KW_NAMES                      10
+        1224    PRECALL                       4
+        1228    CALL                          4
+        1238    BEFORE_WITH                   
+        1240    STORE_NAME                    28: f
+        1242    LOAD_NAME                     28: f
+        1244    LOAD_METHOD                   29: write
+        1266    LOAD_CONST                    35: '[MARK]'
+        1268    PRECALL                       1
+        1272    CALL                          1
+        1282    POP_TOP                       
+        1284    LOAD_NAME                     28: f
+        1286    LOAD_METHOD                   29: write
+        1308    LOAD_CONST                    32: '\r\n'
+        1310    PRECALL                       1
+        1314    CALL                          1
+        1324    POP_TOP                       
+        1326    LOAD_CONST                    3: None
+        1328    LOAD_CONST                    3: None
+        1330    LOAD_CONST                    3: None
+        1332    PRECALL                       2
+        1336    CALL                          2
+        1346    POP_TOP                       
+        1348    JUMP_FORWARD                  11 (to 1372)
+        1350    PUSH_EXC_INFO                 
+        1352    WITH_EXCEPT_START             
+        1354    POP_JUMP_FORWARD_IF_TRUE      4 (to 1364)
+        1356    RERAISE                       2
+        1358    COPY                          3
+        1360    POP_EXCEPT                    
+        1362    RERAISE                       1
+        1364    POP_TOP                       
+        1366    POP_EXCEPT                    
+        1368    POP_TOP                       
+        1370    POP_TOP                       
+        1372    LOAD_NAME                     19: data_list
+        1374    GET_ITER                      
+        1376    FOR_ITER                      180 (to 1738)
+        1378    STORE_NAME                    20: data
+        1380    LOAD_NAME                     20: data
+        1382    LOAD_CONST                    18: 'symbol'
+        1384    BINARY_SUBSCR                 
+        1394    STORE_NAME                    21: data1
+        1396    LOAD_NAME                     21: data1
+        1398    LOAD_CONST                    2: 0
+        1400    LOAD_CONST                    19: 6
+        1402    BUILD_SLICE                   2
+        1404    BINARY_SUBSCR                 
+        1414    STORE_NAME                    22: data2
+        1416    LOAD_NAME                     20: data
+        1418    LOAD_CONST                    20: 'stock_chi_name'
+        1420    BINARY_SUBSCR                 
+        1430    STORE_NAME                    23: data3
+        1432    LOAD_NAME                     20: data
+        1434    LOAD_CONST                    21: 'surge_reason'
+        1436    BINARY_SUBSCR                 
+        1446    LOAD_CONST                    22: 'related_plates'
+        1448    BINARY_SUBSCR                 
+        1458    LOAD_CONST                    2: 0
+        1460    BINARY_SUBSCR                 
+        1470    LOAD_CONST                    23: 'plate_name'
+        1472    BINARY_SUBSCR                 
+        1482    STORE_NAME                    24: data4
+        1484    LOAD_NAME                     21: data1
+        1486    LOAD_NAME                     23: data3
+        1488    LOAD_NAME                     24: data4
+        1490    LOAD_CONST                    11: ('股票代码', '股票名称', '涨停原因')
+        1492    BUILD_CONST_KEY_MAP           3
+        1494    STORE_NAME                    25: data_dict
+        1496    LOAD_NAME                     21: data1
+        1498    LOAD_CONST                    2: 0
+        1500    BINARY_SUBSCR                 
+        1510    LOAD_CONST                    24: '6'
+        1512    COMPARE_OP                    2 (==)
+        1518    POP_JUMP_FORWARD_IF_FALSE     14 (to 1548)
+        1520    LOAD_CONST                    36: '01'
+        1522    LOAD_NAME                     22: data2
+        1524    BINARY_OP                     0 (+)
+        1528    STORE_NAME                    22: data2
+        1530    LOAD_NAME                     22: data2
+        1532    LOAD_CONST                    37: '='
+        1534    BINARY_OP                     0 (+)
+        1538    LOAD_CONST                    38: '7'
+        1540    BINARY_OP                     0 (+)
+        1544    STORE_NAME                    30: MARK
+        1546    JUMP_FORWARD                  13 (to 1574)
+        1548    LOAD_CONST                    39: '00'
+        1550    LOAD_NAME                     22: data2
+        1552    BINARY_OP                     0 (+)
+        1556    STORE_NAME                    22: data2
+        1558    LOAD_NAME                     22: data2
+        1560    LOAD_CONST                    37: '='
+        1562    BINARY_OP                     0 (+)
+        1566    LOAD_CONST                    38: '7'
+        1568    BINARY_OP                     0 (+)
+        1572    STORE_NAME                    30: MARK
+        1574    PUSH_NULL                     
+        1576    LOAD_NAME                     8: open
+        1578    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        1580    LOAD_CONST                    30: 'a'
+        1582    LOAD_CONST                    31: 'ANSI'
+        1584    LOAD_CONST                    9: ''
+        1586    KW_NAMES                      10
+        1588    PRECALL                       4
+        1592    CALL                          4
+        1602    BEFORE_WITH                   
+        1604    STORE_NAME                    28: f
+        1606    LOAD_NAME                     28: f
+        1608    LOAD_METHOD                   29: write
+        1630    LOAD_NAME                     30: MARK
+        1632    PRECALL                       1
+        1636    CALL                          1
+        1646    POP_TOP                       
+        1648    LOAD_NAME                     28: f
+        1650    LOAD_METHOD                   29: write
+        1672    LOAD_CONST                    32: '\r\n'
+        1674    PRECALL                       1
+        1678    CALL                          1
+        1688    POP_TOP                       
+        1690    LOAD_CONST                    3: None
+        1692    LOAD_CONST                    3: None
+        1694    LOAD_CONST                    3: None
+        1696    PRECALL                       2
+        1700    CALL                          2
+        1710    POP_TOP                       
+        1712    JUMP_FORWARD                  11 (to 1736)
+        1714    PUSH_EXC_INFO                 
+        1716    WITH_EXCEPT_START             
+        1718    POP_JUMP_FORWARD_IF_TRUE      4 (to 1728)
+        1720    RERAISE                       2
+        1722    COPY                          3
+        1724    POP_EXCEPT                    
+        1726    RERAISE                       1
+        1728    POP_TOP                       
+        1730    POP_EXCEPT                    
+        1732    POP_TOP                       
+        1734    POP_TOP                       
+        1736    JUMP_BACKWARD                 181
+        1738    PUSH_NULL                     
+        1740    LOAD_NAME                     8: open
+        1742    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        1744    LOAD_CONST                    30: 'a'
+        1746    LOAD_CONST                    31: 'ANSI'
+        1748    LOAD_CONST                    9: ''
+        1750    KW_NAMES                      10
+        1752    PRECALL                       4
+        1756    CALL                          4
+        1766    BEFORE_WITH                   
+        1768    STORE_NAME                    28: f
+        1770    LOAD_NAME                     28: f
+        1772    LOAD_METHOD                   29: write
+        1794    LOAD_CONST                    40: '[TIP]'
+        1796    PRECALL                       1
+        1800    CALL                          1
+        1810    POP_TOP                       
+        1812    LOAD_NAME                     28: f
+        1814    LOAD_METHOD                   29: write
+        1836    LOAD_CONST                    32: '\r\n'
+        1838    PRECALL                       1
+        1842    CALL                          1
+        1852    POP_TOP                       
+        1854    LOAD_CONST                    3: None
+        1856    LOAD_CONST                    3: None
+        1858    LOAD_CONST                    3: None
+        1860    PRECALL                       2
+        1864    CALL                          2
+        1874    POP_TOP                       
+        1876    JUMP_FORWARD                  11 (to 1900)
+        1878    PUSH_EXC_INFO                 
+        1880    WITH_EXCEPT_START             
+        1882    POP_JUMP_FORWARD_IF_TRUE      4 (to 1892)
+        1884    RERAISE                       2
+        1886    COPY                          3
+        1888    POP_EXCEPT                    
+        1890    RERAISE                       1
+        1892    POP_TOP                       
+        1894    POP_EXCEPT                    
+        1896    POP_TOP                       
+        1898    POP_TOP                       
+        1900    LOAD_NAME                     19: data_list
+        1902    GET_ITER                      
+        1904    FOR_ITER                      174 (to 2254)
+        1906    STORE_NAME                    20: data
+        1908    LOAD_NAME                     20: data
+        1910    LOAD_CONST                    18: 'symbol'
+        1912    BINARY_SUBSCR                 
+        1922    STORE_NAME                    21: data1
+        1924    LOAD_NAME                     21: data1
+        1926    LOAD_CONST                    2: 0
+        1928    LOAD_CONST                    19: 6
+        1930    BUILD_SLICE                   2
+        1932    BINARY_SUBSCR                 
+        1942    STORE_NAME                    22: data2
+        1944    LOAD_NAME                     20: data
+        1946    LOAD_CONST                    20: 'stock_chi_name'
+        1948    BINARY_SUBSCR                 
+        1958    STORE_NAME                    23: data3
+        1960    LOAD_NAME                     20: data
+        1962    LOAD_CONST                    21: 'surge_reason'
+        1964    BINARY_SUBSCR                 
+        1974    LOAD_CONST                    22: 'related_plates'
+        1976    BINARY_SUBSCR                 
+        1986    LOAD_CONST                    2: 0
+        1988    BINARY_SUBSCR                 
+        1998    LOAD_CONST                    23: 'plate_name'
+        2000    BINARY_SUBSCR                 
+        2010    STORE_NAME                    24: data4
+        2012    LOAD_NAME                     21: data1
+        2014    LOAD_NAME                     23: data3
+        2016    LOAD_NAME                     24: data4
+        2018    LOAD_CONST                    11: ('股票代码', '股票名称', '涨停原因')
+        2020    BUILD_CONST_KEY_MAP           3
+        2022    STORE_NAME                    25: data_dict
+        2024    LOAD_NAME                     21: data1
+        2026    LOAD_CONST                    2: 0
+        2028    BINARY_SUBSCR                 
+        2038    LOAD_CONST                    24: '6'
+        2040    COMPARE_OP                    2 (==)
+        2046    POP_JUMP_FORWARD_IF_FALSE     11 (to 2070)
+        2048    LOAD_CONST                    36: '01'
+        2050    LOAD_NAME                     22: data2
+        2052    BINARY_OP                     0 (+)
+        2056    STORE_NAME                    22: data2
+        2058    LOAD_NAME                     22: data2
+        2060    LOAD_CONST                    37: '='
+        2062    BINARY_OP                     0 (+)
+        2066    STORE_NAME                    31: TIP
+        2068    JUMP_FORWARD                  10 (to 2090)
+        2070    LOAD_CONST                    39: '00'
+        2072    LOAD_NAME                     22: data2
+        2074    BINARY_OP                     0 (+)
+        2078    STORE_NAME                    22: data2
+        2080    LOAD_NAME                     22: data2
+        2082    LOAD_CONST                    37: '='
+        2084    BINARY_OP                     0 (+)
+        2088    STORE_NAME                    31: TIP
+        2090    PUSH_NULL                     
+        2092    LOAD_NAME                     8: open
+        2094    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        2096    LOAD_CONST                    30: 'a'
+        2098    LOAD_CONST                    31: 'ANSI'
+        2100    LOAD_CONST                    9: ''
+        2102    KW_NAMES                      10
+        2104    PRECALL                       4
+        2108    CALL                          4
+        2118    BEFORE_WITH                   
+        2120    STORE_NAME                    28: f
+        2122    LOAD_NAME                     28: f
+        2124    LOAD_METHOD                   29: write
+        2146    LOAD_NAME                     31: TIP
+        2148    PRECALL                       1
+        2152    CALL                          1
+        2162    POP_TOP                       
+        2164    LOAD_NAME                     28: f
+        2166    LOAD_METHOD                   29: write
+        2188    LOAD_CONST                    32: '\r\n'
+        2190    PRECALL                       1
+        2194    CALL                          1
+        2204    POP_TOP                       
+        2206    LOAD_CONST                    3: None
+        2208    LOAD_CONST                    3: None
+        2210    LOAD_CONST                    3: None
+        2212    PRECALL                       2
+        2216    CALL                          2
+        2226    POP_TOP                       
+        2228    JUMP_FORWARD                  11 (to 2252)
+        2230    PUSH_EXC_INFO                 
+        2232    WITH_EXCEPT_START             
+        2234    POP_JUMP_FORWARD_IF_TRUE      4 (to 2244)
+        2236    RERAISE                       2
+        2238    COPY                          3
+        2240    POP_EXCEPT                    
+        2242    RERAISE                       1
+        2244    POP_TOP                       
+        2246    POP_EXCEPT                    
+        2248    POP_TOP                       
+        2250    POP_TOP                       
+        2252    JUMP_BACKWARD                 175
+        2254    PUSH_NULL                     
+        2256    LOAD_NAME                     8: open
+        2258    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        2260    LOAD_CONST                    30: 'a'
+        2262    LOAD_CONST                    31: 'ANSI'
+        2264    LOAD_CONST                    9: ''
+        2266    KW_NAMES                      10
+        2268    PRECALL                       4
+        2272    CALL                          4
+        2282    BEFORE_WITH                   
+        2284    STORE_NAME                    28: f
+        2286    LOAD_NAME                     28: f
+        2288    LOAD_METHOD                   29: write
+        2310    LOAD_CONST                    41: '[TIPWORD]'
+        2312    PRECALL                       1
+        2316    CALL                          1
+        2326    POP_TOP                       
+        2328    LOAD_NAME                     28: f
+        2330    LOAD_METHOD                   29: write
+        2352    LOAD_CONST                    32: '\r\n'
+        2354    PRECALL                       1
+        2358    CALL                          1
+        2368    POP_TOP                       
+        2370    LOAD_CONST                    3: None
+        2372    LOAD_CONST                    3: None
+        2374    LOAD_CONST                    3: None
+        2376    PRECALL                       2
+        2380    CALL                          2
+        2390    POP_TOP                       
+        2392    JUMP_FORWARD                  11 (to 2416)
+        2394    PUSH_EXC_INFO                 
+        2396    WITH_EXCEPT_START             
+        2398    POP_JUMP_FORWARD_IF_TRUE      4 (to 2408)
+        2400    RERAISE                       2
+        2402    COPY                          3
+        2404    POP_EXCEPT                    
+        2406    RERAISE                       1
+        2408    POP_TOP                       
+        2410    POP_EXCEPT                    
+        2412    POP_TOP                       
+        2414    POP_TOP                       
+        2416    LOAD_NAME                     19: data_list
+        2418    GET_ITER                      
+        2420    FOR_ITER                      180 (to 2782)
+        2422    STORE_NAME                    20: data
+        2424    LOAD_NAME                     20: data
+        2426    LOAD_CONST                    18: 'symbol'
+        2428    BINARY_SUBSCR                 
+        2438    STORE_NAME                    21: data1
+        2440    LOAD_NAME                     21: data1
+        2442    LOAD_CONST                    2: 0
+        2444    LOAD_CONST                    19: 6
+        2446    BUILD_SLICE                   2
+        2448    BINARY_SUBSCR                 
+        2458    STORE_NAME                    22: data2
+        2460    LOAD_NAME                     20: data
+        2462    LOAD_CONST                    20: 'stock_chi_name'
+        2464    BINARY_SUBSCR                 
+        2474    STORE_NAME                    23: data3
+        2476    LOAD_NAME                     20: data
+        2478    LOAD_CONST                    21: 'surge_reason'
+        2480    BINARY_SUBSCR                 
+        2490    LOAD_CONST                    22: 'related_plates'
+        2492    BINARY_SUBSCR                 
+        2502    LOAD_CONST                    2: 0
+        2504    BINARY_SUBSCR                 
+        2514    LOAD_CONST                    23: 'plate_name'
+        2516    BINARY_SUBSCR                 
+        2526    STORE_NAME                    24: data4
+        2528    LOAD_NAME                     21: data1
+        2530    LOAD_NAME                     23: data3
+        2532    LOAD_NAME                     24: data4
+        2534    LOAD_CONST                    11: ('股票代码', '股票名称', '涨停原因')
+        2536    BUILD_CONST_KEY_MAP           3
+        2538    STORE_NAME                    25: data_dict
+        2540    LOAD_NAME                     21: data1
+        2542    LOAD_CONST                    2: 0
+        2544    BINARY_SUBSCR                 
+        2554    LOAD_CONST                    24: '6'
+        2556    COMPARE_OP                    2 (==)
+        2562    POP_JUMP_FORWARD_IF_FALSE     14 (to 2592)
+        2564    LOAD_CONST                    36: '01'
+        2566    LOAD_NAME                     22: data2
+        2568    BINARY_OP                     0 (+)
+        2572    STORE_NAME                    22: data2
+        2574    LOAD_NAME                     22: data2
+        2576    LOAD_CONST                    37: '='
+        2578    BINARY_OP                     0 (+)
+        2582    LOAD_NAME                     24: data4
+        2584    BINARY_OP                     0 (+)
+        2588    STORE_NAME                    32: TIPWORD
+        2590    JUMP_FORWARD                  13 (to 2618)
+        2592    LOAD_CONST                    39: '00'
+        2594    LOAD_NAME                     22: data2
+        2596    BINARY_OP                     0 (+)
+        2600    STORE_NAME                    22: data2
+        2602    LOAD_NAME                     22: data2
+        2604    LOAD_CONST                    37: '='
+        2606    BINARY_OP                     0 (+)
+        2610    LOAD_NAME                     24: data4
+        2612    BINARY_OP                     0 (+)
+        2616    STORE_NAME                    32: TIPWORD
+        2618    PUSH_NULL                     
+        2620    LOAD_NAME                     8: open
+        2622    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        2624    LOAD_CONST                    30: 'a'
+        2626    LOAD_CONST                    31: 'ANSI'
+        2628    LOAD_CONST                    9: ''
+        2630    KW_NAMES                      10
+        2632    PRECALL                       4
+        2636    CALL                          4
+        2646    BEFORE_WITH                   
+        2648    STORE_NAME                    28: f
+        2650    LOAD_NAME                     28: f
+        2652    LOAD_METHOD                   29: write
+        2674    LOAD_NAME                     32: TIPWORD
+        2676    PRECALL                       1
+        2680    CALL                          1
+        2690    POP_TOP                       
+        2692    LOAD_NAME                     28: f
+        2694    LOAD_METHOD                   29: write
+        2716    LOAD_CONST                    32: '\r\n'
+        2718    PRECALL                       1
+        2722    CALL                          1
+        2732    POP_TOP                       
+        2734    LOAD_CONST                    3: None
+        2736    LOAD_CONST                    3: None
+        2738    LOAD_CONST                    3: None
+        2740    PRECALL                       2
+        2744    CALL                          2
+        2754    POP_TOP                       
+        2756    JUMP_FORWARD                  11 (to 2780)
+        2758    PUSH_EXC_INFO                 
+        2760    WITH_EXCEPT_START             
+        2762    POP_JUMP_FORWARD_IF_TRUE      4 (to 2772)
+        2764    RERAISE                       2
+        2766    COPY                          3
+        2768    POP_EXCEPT                    
+        2770    RERAISE                       1
+        2772    POP_TOP                       
+        2774    POP_EXCEPT                    
+        2776    POP_TOP                       
+        2778    POP_TOP                       
+        2780    JUMP_BACKWARD                 181
+        2782    PUSH_NULL                     
+        2784    LOAD_NAME                     8: open
+        2786    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        2788    LOAD_CONST                    30: 'a'
+        2790    LOAD_CONST                    31: 'ANSI'
+        2792    LOAD_CONST                    9: ''
+        2794    KW_NAMES                      10
+        2796    PRECALL                       4
+        2800    CALL                          4
+        2810    BEFORE_WITH                   
+        2812    STORE_NAME                    28: f
+        2814    LOAD_NAME                     28: f
+        2816    LOAD_METHOD                   29: write
+        2838    LOAD_CONST                    42: '[TIPCOLOR]'
+        2840    PRECALL                       1
+        2844    CALL                          1
+        2854    POP_TOP                       
+        2856    LOAD_NAME                     28: f
+        2858    LOAD_METHOD                   29: write
+        2880    LOAD_CONST                    32: '\r\n'
+        2882    PRECALL                       1
+        2886    CALL                          1
+        2896    POP_TOP                       
+        2898    LOAD_CONST                    3: None
+        2900    LOAD_CONST                    3: None
+        2902    LOAD_CONST                    3: None
+        2904    PRECALL                       2
+        2908    CALL                          2
+        2918    POP_TOP                       
+        2920    JUMP_FORWARD                  11 (to 2944)
+        2922    PUSH_EXC_INFO                 
+        2924    WITH_EXCEPT_START             
+        2926    POP_JUMP_FORWARD_IF_TRUE      4 (to 2936)
+        2928    RERAISE                       2
+        2930    COPY                          3
+        2932    POP_EXCEPT                    
+        2934    RERAISE                       1
+        2936    POP_TOP                       
+        2938    POP_EXCEPT                    
+        2940    POP_TOP                       
+        2942    POP_TOP                       
+        2944    LOAD_NAME                     19: data_list
+        2946    GET_ITER                      
+        2948    FOR_ITER                      180 (to 3310)
+        2950    STORE_NAME                    20: data
+        2952    LOAD_NAME                     20: data
+        2954    LOAD_CONST                    18: 'symbol'
+        2956    BINARY_SUBSCR                 
+        2966    STORE_NAME                    21: data1
+        2968    LOAD_NAME                     21: data1
+        2970    LOAD_CONST                    2: 0
+        2972    LOAD_CONST                    19: 6
+        2974    BUILD_SLICE                   2
+        2976    BINARY_SUBSCR                 
+        2986    STORE_NAME                    22: data2
+        2988    LOAD_NAME                     20: data
+        2990    LOAD_CONST                    20: 'stock_chi_name'
+        2992    BINARY_SUBSCR                 
+        3002    STORE_NAME                    23: data3
+        3004    LOAD_NAME                     20: data
+        3006    LOAD_CONST                    21: 'surge_reason'
+        3008    BINARY_SUBSCR                 
+        3018    LOAD_CONST                    22: 'related_plates'
+        3020    BINARY_SUBSCR                 
+        3030    LOAD_CONST                    2: 0
+        3032    BINARY_SUBSCR                 
+        3042    LOAD_CONST                    23: 'plate_name'
+        3044    BINARY_SUBSCR                 
+        3054    STORE_NAME                    24: data4
+        3056    LOAD_NAME                     21: data1
+        3058    LOAD_NAME                     23: data3
+        3060    LOAD_NAME                     24: data4
+        3062    LOAD_CONST                    11: ('股票代码', '股票名称', '涨停原因')
+        3064    BUILD_CONST_KEY_MAP           3
+        3066    STORE_NAME                    25: data_dict
+        3068    LOAD_NAME                     21: data1
+        3070    LOAD_CONST                    2: 0
+        3072    BINARY_SUBSCR                 
+        3082    LOAD_CONST                    24: '6'
+        3084    COMPARE_OP                    2 (==)
+        3090    POP_JUMP_FORWARD_IF_FALSE     14 (to 3120)
+        3092    LOAD_CONST                    36: '01'
+        3094    LOAD_NAME                     22: data2
+        3096    BINARY_OP                     0 (+)
+        3100    STORE_NAME                    22: data2
+        3102    LOAD_NAME                     22: data2
+        3104    LOAD_CONST                    37: '='
+        3106    BINARY_OP                     0 (+)
+        3110    LOAD_CONST                    43: '65535'
+        3112    BINARY_OP                     0 (+)
+        3116    STORE_NAME                    33: TIPCOLOR
+        3118    JUMP_FORWARD                  13 (to 3146)
+        3120    LOAD_CONST                    39: '00'
+        3122    LOAD_NAME                     22: data2
+        3124    BINARY_OP                     0 (+)
+        3128    STORE_NAME                    22: data2
+        3130    LOAD_NAME                     22: data2
+        3132    LOAD_CONST                    37: '='
+        3134    BINARY_OP                     0 (+)
+        3138    LOAD_CONST                    43: '65535'
+        3140    BINARY_OP                     0 (+)
+        3144    STORE_NAME                    33: TIPCOLOR
+        3146    PUSH_NULL                     
+        3148    LOAD_NAME                     8: open
+        3150    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        3152    LOAD_CONST                    30: 'a'
+        3154    LOAD_CONST                    31: 'ANSI'
+        3156    LOAD_CONST                    9: ''
+        3158    KW_NAMES                      10
+        3160    PRECALL                       4
+        3164    CALL                          4
+        3174    BEFORE_WITH                   
+        3176    STORE_NAME                    28: f
+        3178    LOAD_NAME                     28: f
+        3180    LOAD_METHOD                   29: write
+        3202    LOAD_NAME                     33: TIPCOLOR
+        3204    PRECALL                       1
+        3208    CALL                          1
+        3218    POP_TOP                       
+        3220    LOAD_NAME                     28: f
+        3222    LOAD_METHOD                   29: write
+        3244    LOAD_CONST                    32: '\r\n'
+        3246    PRECALL                       1
+        3250    CALL                          1
+        3260    POP_TOP                       
+        3262    LOAD_CONST                    3: None
+        3264    LOAD_CONST                    3: None
+        3266    LOAD_CONST                    3: None
+        3268    PRECALL                       2
+        3272    CALL                          2
+        3282    POP_TOP                       
+        3284    JUMP_FORWARD                  11 (to 3308)
+        3286    PUSH_EXC_INFO                 
+        3288    WITH_EXCEPT_START             
+        3290    POP_JUMP_FORWARD_IF_TRUE      4 (to 3300)
+        3292    RERAISE                       2
+        3294    COPY                          3
+        3296    POP_EXCEPT                    
+        3298    RERAISE                       1
+        3300    POP_TOP                       
+        3302    POP_EXCEPT                    
+        3304    POP_TOP                       
+        3306    POP_TOP                       
+        3308    JUMP_BACKWARD                 181
+        3310    PUSH_NULL                     
+        3312    LOAD_NAME                     8: open
+        3314    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        3316    LOAD_CONST                    30: 'a'
+        3318    LOAD_CONST                    31: 'ANSI'
+        3320    LOAD_CONST                    9: ''
+        3322    KW_NAMES                      10
+        3324    PRECALL                       4
+        3328    CALL                          4
+        3338    BEFORE_WITH                   
+        3340    STORE_NAME                    28: f
+        3342    LOAD_NAME                     28: f
+        3344    LOAD_METHOD                   29: write
+        3366    LOAD_CONST                    44: '[TIME]'
+        3368    PRECALL                       1
+        3372    CALL                          1
+        3382    POP_TOP                       
+        3384    LOAD_NAME                     28: f
+        3386    LOAD_METHOD                   29: write
+        3408    LOAD_CONST                    32: '\r\n'
+        3410    PRECALL                       1
+        3414    CALL                          1
+        3424    POP_TOP                       
+        3426    LOAD_CONST                    3: None
+        3428    LOAD_CONST                    3: None
+        3430    LOAD_CONST                    3: None
+        3432    PRECALL                       2
+        3436    CALL                          2
+        3446    POP_TOP                       
+        3448    JUMP_FORWARD                  11 (to 3472)
+        3450    PUSH_EXC_INFO                 
+        3452    WITH_EXCEPT_START             
+        3454    POP_JUMP_FORWARD_IF_TRUE      4 (to 3464)
+        3456    RERAISE                       2
+        3458    COPY                          3
+        3460    POP_EXCEPT                    
+        3462    RERAISE                       1
+        3464    POP_TOP                       
+        3466    POP_EXCEPT                    
+        3468    POP_TOP                       
+        3470    POP_TOP                       
+        3472    LOAD_NAME                     19: data_list
+        3474    GET_ITER                      
+        3476    FOR_ITER                      174 (to 3826)
+        3478    STORE_NAME                    20: data
+        3480    LOAD_NAME                     20: data
+        3482    LOAD_CONST                    18: 'symbol'
+        3484    BINARY_SUBSCR                 
+        3494    STORE_NAME                    21: data1
+        3496    LOAD_NAME                     21: data1
+        3498    LOAD_CONST                    2: 0
+        3500    LOAD_CONST                    19: 6
+        3502    BUILD_SLICE                   2
+        3504    BINARY_SUBSCR                 
+        3514    STORE_NAME                    22: data2
+        3516    LOAD_NAME                     20: data
+        3518    LOAD_CONST                    20: 'stock_chi_name'
+        3520    BINARY_SUBSCR                 
+        3530    STORE_NAME                    23: data3
+        3532    LOAD_NAME                     20: data
+        3534    LOAD_CONST                    21: 'surge_reason'
+        3536    BINARY_SUBSCR                 
+        3546    LOAD_CONST                    22: 'related_plates'
+        3548    BINARY_SUBSCR                 
+        3558    LOAD_CONST                    2: 0
+        3560    BINARY_SUBSCR                 
+        3570    LOAD_CONST                    23: 'plate_name'
+        3572    BINARY_SUBSCR                 
+        3582    STORE_NAME                    24: data4
+        3584    LOAD_NAME                     21: data1
+        3586    LOAD_NAME                     23: data3
+        3588    LOAD_NAME                     24: data4
+        3590    LOAD_CONST                    11: ('股票代码', '股票名称', '涨停原因')
+        3592    BUILD_CONST_KEY_MAP           3
+        3594    STORE_NAME                    25: data_dict
+        3596    LOAD_NAME                     21: data1
+        3598    LOAD_CONST                    2: 0
+        3600    BINARY_SUBSCR                 
+        3610    LOAD_CONST                    24: '6'
+        3612    COMPARE_OP                    2 (==)
+        3618    POP_JUMP_FORWARD_IF_FALSE     11 (to 3642)
+        3620    LOAD_CONST                    36: '01'
+        3622    LOAD_NAME                     22: data2
+        3624    BINARY_OP                     0 (+)
+        3628    STORE_NAME                    22: data2
+        3630    LOAD_NAME                     22: data2
+        3632    LOAD_CONST                    37: '='
+        3634    BINARY_OP                     0 (+)
+        3638    STORE_NAME                    34: TIME
+        3640    JUMP_FORWARD                  10 (to 3662)
+        3642    LOAD_CONST                    39: '00'
+        3644    LOAD_NAME                     22: data2
+        3646    BINARY_OP                     0 (+)
+        3650    STORE_NAME                    22: data2
+        3652    LOAD_NAME                     22: data2
+        3654    LOAD_CONST                    37: '='
+        3656    BINARY_OP                     0 (+)
+        3660    STORE_NAME                    34: TIME
+        3662    PUSH_NULL                     
+        3664    LOAD_NAME                     8: open
+        3666    LOAD_CONST                    6: 'C:\\new_haitong\\T0002\\mark.dat'
+        3668    LOAD_CONST                    30: 'a'
+        3670    LOAD_CONST                    31: 'ANSI'
+        3672    LOAD_CONST                    9: ''
+        3674    KW_NAMES                      10
+        3676    PRECALL                       4
+        3680    CALL                          4
+        3690    BEFORE_WITH                   
+        3692    STORE_NAME                    28: f
+        3694    LOAD_NAME                     28: f
+        3696    LOAD_METHOD                   29: write
+        3718    LOAD_NAME                     34: TIME
+        3720    PRECALL                       1
+        3724    CALL                          1
+        3734    POP_TOP                       
+        3736    LOAD_NAME                     28: f
+        3738    LOAD_METHOD                   29: write
+        3760    LOAD_CONST                    32: '\r\n'
+        3762    PRECALL                       1
+        3766    CALL                          1
+        3776    POP_TOP                       
+        3778    LOAD_CONST                    3: None
+        3780    LOAD_CONST                    3: None
+        3782    LOAD_CONST                    3: None
+        3784    PRECALL                       2
+        3788    CALL                          2
+        3798    POP_TOP                       
+        3800    JUMP_FORWARD                  11 (to 3824)
+        3802    PUSH_EXC_INFO                 
+        3804    WITH_EXCEPT_START             
+        3806    POP_JUMP_FORWARD_IF_TRUE      4 (to 3816)
+        3808    RERAISE                       2
+        3810    COPY                          3
+        3812    POP_EXCEPT                    
+        3814    RERAISE                       1
+        3816    POP_TOP                       
+        3818    POP_EXCEPT                    
+        3820    POP_TOP                       
+        3822    POP_TOP                       
+        3824    JUMP_BACKWARD                 175
+        3826    PUSH_NULL                     
+        3828    LOAD_NAME                     4: time
+        3830    LOAD_ATTR                     35: sleep
+        3840    LOAD_CONST                    45: 3
+        3842    PRECALL                       1
+        3846    CALL                          1
+        3856    POP_TOP                       
+        3858    PUSH_NULL                     
+        3860    LOAD_NAME                     0: print
+        3862    LOAD_CONST                    46: '数据提取制作完成！'
+        3864    PRECALL                       1
+        3868    CALL                          1
+        3878    POP_TOP                       
+        3880    PUSH_NULL                     
+        3882    LOAD_NAME                     4: time
+        3884    LOAD_ATTR                     35: sleep
+        3894    LOAD_CONST                    47: 5
+        3896    PRECALL                       1
+        3900    CALL                          1
+        3910    POP_TOP                       
+        3912    LOAD_CONST                    3: None
+        3914    RETURN_VALUE                  
